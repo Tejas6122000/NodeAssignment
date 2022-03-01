@@ -56,7 +56,7 @@ const updatePassword =(email,password,newpassword)=>{
     for(let i=0; i<users.length;i++){
         if(users[i].email==email && bcrypt.compareSync(password,users[i].password)){
 
-            users[i].password=bcrypt.hashSync(newpassword, 10);;
+            users[i].password=bcrypt.hashSync(newpassword, 10);
             message = "Password Changed Successfully"
             break
         }
